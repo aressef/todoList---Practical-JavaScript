@@ -37,6 +37,12 @@ li {
   display: block;
 }
 
+.toggleCompletedButton {
+  background-color: #F6FFF8;
+  border-color: #6B9080;
+  border-radius: 50%;
+}
+
 input {
   border-color: #000;
   border-width: 1px;
