@@ -12,21 +12,26 @@
     <h1>Todo List</h1>
 
     <div class="todo-box">
-      <div>
-        <button onclick="handlers.toggleAll()" id="test">Toggle All</button>
-        <input id="addTodoTextInput" type="text" onkeypress="handleKeyPress(event)">
-        <button onclick="handlers.addTodo()">Add</button>
+      <div class="addTodo">
+        <button onclick="handlers.toggleAll()" id="test" class="fa fa-chevron-down"></button>
+        <input id="addTodoTextInput" class="addTodoTextInput" type="text" onkeypress="handleKeyPress(event)">
+        <button onclick="handlers.addTodo()">+</button>
       </div>
 
-      <div>
+      <div class="todo-list">
         <ul></ul>
       </div>
 
-      <div>
+      <div class="changeTodo">
         <button onclick="handlers.changeTodo()">Change Todo</button>
         <input id="changeTodoPositionInput" type="number">
         <input id="changeTodoTextInput" type="text">
       </div>
+
+      <div>
+        <p id="itemsRemaining"></p>
+      </div>
+
     </div>
 
     <script src="index.js"></script>

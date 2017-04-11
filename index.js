@@ -79,12 +79,11 @@ var view = {
       var todoTextWithCompletion = '';
       var toggleCompletedButton = this.createToggleCompletedButton();
       var incomplete = " fa fa-square-o";
-      var complete = " fa fa-check-square-o";
+      var complete = " fa fa-check";
       if (todo.completed === true) {
         toggleCompletedButton.className += complete;
         todoTextWithCompletion = todo.todoText;
       } else {
-        toggleCompletedButton.className += incomplete;
         todoTextWithCompletion = todo.todoText;
       }
 
@@ -133,4 +132,11 @@ function handleKeyPress(e) {
     if (key==13) {
       handlers.addTodo();
     }
+}
+
+function displayItemsRemaining() {
+  var numberOfItemsRemaining = todoList.todos.length;
+  var updateNumber = document.getElementById('itemsRemaining');
+  updateNumber = numberOfItemsRemaining + " items remaining";
+
 }
