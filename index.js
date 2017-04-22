@@ -120,8 +120,7 @@ var view = {
         handlers.toggleCompleted(elementClicked.parentNode.id);
       }
     });
-  },
-
+  }
 };
 
 view.setUpEventListeners();
@@ -134,9 +133,21 @@ function handleKeyPress(e) {
     }
 }
 
-function displayItemsRemaining() {
-  var numberOfItemsRemaining = todoList.todos.length;
-  var updateNumber = document.getElementById('itemsRemaining');
-  updateNumber = numberOfItemsRemaining + " items remaining";
+function itemsRemainingCounter() {
+  var itemCount = todoList.todos.length - todoList.toggleAll.todosCompleted;
+  var updateNumber = document.getElementById('itemsRemainingCounter');
+  updateNumber.textContent = itemCount + " items remaining";
 
 }
+
+// function toggleColorOfToggleAll() {
+//   var toggleCompleted = document.getElementById('test');
+//   toggleCompleted.addEventListener('click', function() {
+//     if (todoList.todo.completed == false) {
+//       button.addList.add(.toggleAllCompleted);
+//     } else {
+//       button.addList.remove(.toggleAllCompleted);
+//     }
+//   });
+// }
+//

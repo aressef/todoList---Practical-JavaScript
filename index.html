@@ -4,6 +4,7 @@
     <title>Practical Todos</title>
 
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
   </head>
@@ -14,8 +15,8 @@
     <div class="todo-box">
       <div class="addTodo">
         <button onclick="handlers.toggleAll()" id="test" class="fa fa-chevron-down"></button>
-        <input id="addTodoTextInput" class="addTodoTextInput" type="text" onkeypress="handleKeyPress(event)">
-        <button onclick="handlers.addTodo()">+</button>
+        <input id="addTodoTextInput" class="addTodoTextInput" type="text" onkeypress="handleKeyPress(event)" placeholder="What do you need to do?">
+         <!-- <button onclick="handlers.addTodo()">+</button> -->
       </div>
 
       <div class="todo-list">
@@ -29,7 +30,7 @@
       </div>
 
       <div>
-        <p id="itemsRemaining"></p>
+        <p id="itemsRemaining">Place Holder Text</p>
       </div>
 
     </div>
